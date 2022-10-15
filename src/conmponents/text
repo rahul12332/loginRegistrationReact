@@ -1,0 +1,177 @@
+<div className="continer-fluid mt-5 about-style" id="aboutid">
+<div className="row">
+  <div className="col-md-6 col-12 mx-auto ">
+    <div className="section">
+    <h2 className="text-center ">Login</h2>
+    <div className="row">
+      <div className="col-md-4 md-12 hero-image  align-items-center flex-column ">
+        
+
+   
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+useEffect(()=>{   
+  const callAboutPage= async()=>{
+    try {
+      const fetchData = await window.fetch('/about',{
+          method: "GET",
+          headers:{
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          },
+          credentials: "include" // ye hum isliye likh re h taki humari cookie backend tak pahuch jaye
+          
+
+      });
+
+      const data = await fetchData.json 
+       console.log(data)
+       await setUser(data)
+      if(fetchData.status===200){
+        setUser(data)
+        console.log(user)
+      }
+      
+
+
+    } catch (error) {
+      console.log(error)
+      window.alert('internal problem')
+      // agar user nahi milta ya problem aati h to usko login page push karo
+      // navigate('/login')
+    }
+}
+callAboutPage();
+},[setUser])
+
+
+
+
+
+
+
+
+
+
+
+<div className="background2">
+  <div className="col-md-6 md-12 mx-auto">
+      
+    <div className="about-container">
+      <div className="section4">
+        <div className="container emp-profile">
+          <form method="GET">
+            <div className="row">
+              <div className="col-md-4">
+                <div className=" my-profileImg">
+                <img src={amitImg} alt="" className="profile-image px-5" />
+                </div>
+              </div>
+               {
+              <div className="col-md-4 ">
+                <div className="profile-head">
+                  <div>{user.name}</div>
+                  <h6>{user.work}</h6>
+                  <ul className="nav justify-content-center">
+                    <li className="nav-item">
+                      <a className="nav-link active"  data-toggle="tab" aria-current="page"href="#home-tab" role="tab" >
+                        about
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                    <a className="nav-link"  data-toggle="tab" aria-current="page" href="#profile-tab" role="tab" >
+                        Link
+                      </a>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </div>
+               }
+              <div className="col-md-4">
+                <input type="submit" className="profile-edit-button" name="btnAddMore"  value="edit"/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-4">
+                <div className=" my-link">
+                  <a href="https://github.com/rahul12332"rel="noreferrer" target="_blank"><button className="aboutbtn1">github</button></a>
+                  <a href="https://github.com/rahul12332"rel="noreferrer" target="_blank"><button className="aboutbtn1">github</button></a>
+                  <a href="https://github.com/rahul12332"rel="noreferrer" target="_blank"><button className="aboutbtn1">github</button></a>
+                  <a href="https://github.com/rahul12332"rel="noreferrer" target="_blank"><button className="aboutbtn1">github</button></a>
+                  <a href="https://github.com/rahul12332"rel="noreferrer" target="_blank"><button className="aboutbtn1">github</button></a>
+                  <a href="https://github.com/rahul12332"rel="noreferrer" target="_blank"><button className="aboutbtn1">github</button></a>
+
+                </div>
+              </div>
+              <div className="col-md-4 ">
+                <div className="profile-tab-container ">
+                  <div className="tab-content">
+                    <div role="tabpanel" className="tab-pane active" id="home-tab">
+                      <h5>{user.name}</h5>
+                      <h5>{user.email}</h5>
+                      <h5>{user.phone}</h5>
+                      <h5>{user.work}</h5>  
+                    </div>
+
+                    <div role="tabpanel" className="tab-pane" id="profile-tab">
+                      <h5>class</h5>
+                      <h5>className</h5>
+                      <h5>subject</h5>
+                      <h5>address</h5>
+                      </div>
+                  </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</>
+
+navbar
+
+<nav className="navbar navbar-expand-lg bg-light">
+  <div className="container-fluid">
+    <h3 className='userName'>{user.name}</h3>
+      
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/about">About</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/contact">Contact</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/Login">Login</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/signup">signup</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/signout">logout</Link>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>

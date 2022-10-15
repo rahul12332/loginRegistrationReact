@@ -1,38 +1,278 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Passions+Conflict&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #6cdab9
+
+    ;
+
+}
+.form-group{
+    position: relative;
+}
+i{
+    position: absolute;
+    top: calc(60%);
+    left: 1.5rem;
+}
+.form-group .form-control{
+    left: 0.5rem;
+    padding-left: 3.5rem;
+}
+img{
+    margin-left: 5px;
+    margin-top: 30%;
+}
+input{
+    height: 2rem;
+    border: none;
+    padding: 5px;
+    width: 50%;
+}
+#register{
+    width: 99%;
+    font-weight: bold;
+    background-color: rgb(51, 53, 47);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    border-style: none;
+    color: white;
+}
+#register:hover{
+    background-color: navajowhite;
+    color: brown;
+    border-style: none;
+
+}
+#login{
+    width: 100%;
+    font-weight: bold;
+    background-color: greenyellow;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    border-style: none;
+
+}
+#login:hover{
+    background-color: navajowhite;
+    color: brown;
+    border-style: none;
+
+}
+.section{
+    box-shadow: 4px 2px 4px 1px #fb9902, 0 2px 0 1px rgb(193, 179, 179) ;
+    border-radius: 0.5rem;
+    background-color: #e9692c;
+    opacity: .9;
+    
+    
+}
+.login-form{
+    margin-top: 20%;
+}
+h2{
+    padding-top: 5%;
+    font-family: fantasy;
+    letter-spacing: 1.5px;
+}
+h4{
+    margin-left: 15%;
+    border: none;
+    font-size: 20px;
+}
+.contact_phone{
+    background-color:rgb(241, 235, 235);
+    box-shadow: 4px 2px 4px 1px rgb(191, 180, 180), 0 2px 0 1px rgb(193, 179, 179) ;
+    opacity: 0.9;
+}
+.contact_info_title{
+    margin-left: 1rem;
+}
+.contact_info_text{
+    margin-left: 1rem;
+}
+.contact-form{
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+.message{
+    width: 100%;
+    margin-top: 1rem;
+    height: 10rem;
+}
+.send-message{
+    background-color: #202A44;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    box-shadow: 1px 1px 1px 1px gray;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.send-message:hover{
+    background-color: #01BF99;
+    color: #BF3300;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background-image{
+background-image: url('./images/background.jpg');
+background-size: cover;
+height: 100vh;
+}
+.overlay{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.explore{
+    margin-top: 2rem;
+    background-color: transparent;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 2rem;
+    border: 2px solid greenyellow;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+
+}
+.explore:hover{
+    /* background-color: #ACD1AF; */
+    border: 2px solid brown;
+    color: red;
+
+}
+.mernStack1{
+    font-family: 'Passions Conflict', cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    text-transform: capitalize;
+
+}
+.mernStack{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+.background2{
+    background-color: whitesmoke;
+    background-size: cover;
+    height: 100vh;
+}
+.about-container{
+padding-top: 5%;
+}
+/* about page */
+.profile-image{
+    margin-top: 10%;
+    width: 80%;
+}
+.profile-head{
+background-color: slategrey;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 10%;
+color: white;
+border-top-left-radius: 1.5rem;
+border-top-right-radius: 1.5rem;
+
+
+}
+.section4{
+    
+    box-shadow: 4px 2px 4px 1px gray, 0 2px 0 1px rgb(193, 179, 179) ;
+    border-radius: 0.5rem;
+    background-color: white	;
+    opacity: .9;
+    
+
+    
+}
+.profile-work{
+    margin-left:17% ;
+    padding-top: 10%;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    
+}
+.aboutbtn1{
+    display: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: transparent;
+    border: 2px solid green;
+    color: wheat;
+    text-transform: capitalize;
+    border-radius: 10rem;
+    margin-bottom: 1rem;
+    margin-top: 5%;
+}
+a{
+    text-decoration: none;
+}
+.aboutbtn1:hover{
+    background-color: #7BCCB5;
+    color: red;
+    border: 2px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-edit-button{
+    float: right;
+    margin-top: 10%;
+    border-radius: 5%;
+    background-color: azure;
+    color: #202A44;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+.row2{
+    width: 100%;
+    background-color: #BF3300;
+    
+
+}
+.profile-tab-container{
+    background-color: oldlace;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* navbar */
+
+.navbar{
+    width: 100vw;
+    background-image: linear-gradient(-90deg, #051014 , #000000);
+    box-shadow: 0px 2px 5px 0.5px #004d40 ;
+}
+.userName{
+    color: white;
+    padding: 1rem;
+}
+.nav-link{
+    color: white;
+    font-size: 20px;
+}
+.navbar-nav{
+    padding: 1rem;
+}
+.nav-link:hover{
+    color: red;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
